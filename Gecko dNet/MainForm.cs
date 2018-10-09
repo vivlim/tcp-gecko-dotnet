@@ -531,7 +531,14 @@ namespace GeckoApp
                     GameNameStored = false;
                     DisconnectButton.Enabled = true;
 
-                    //PopulateThreads(os_ver);
+                    try
+                    {
+                        PopulateThreads(os_ver);
+                    }
+                    catch (Exception ex)
+                    {
+                        StatusCap.Text = $"Ready! (no debugging: {ex.Message})";
+                    }
                 }
                 else
                 {
@@ -575,7 +582,7 @@ namespace GeckoApp
             else
             {
                 //TODO
-                throw new NotImplementedException();
+                throw new NotImplementedException($"os_ver {os_ver} unsupported");
             }
 
             uint temp;
