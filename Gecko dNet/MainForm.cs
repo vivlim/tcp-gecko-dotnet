@@ -531,7 +531,7 @@ namespace GeckoApp
                     GameNameStored = false;
                     DisconnectButton.Enabled = true;
 
-                    PopulateThreads(os_ver);
+                    //PopulateThreads(os_ver);
                 }
                 else
                 {
